@@ -5,6 +5,8 @@ const { connectDB } = require("./config/Database");
 const authRouter = require("./Routers/auth");
 const userRouter = require("./Routers/user");
 
+app.use(express.json());
+
 app.use("/", authRouter);
 app.use("/", userRouter);
 
